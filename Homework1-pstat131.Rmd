@@ -7,6 +7,8 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
 ```
 
 (1). Define Supervised and Unsupervised learning. What are the difference(s) between them?
