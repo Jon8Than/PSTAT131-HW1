@@ -7,8 +7,6 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
 ```
 
 (1). Define Supervised and Unsupervised learning. What are the difference(s) between them?
@@ -64,6 +62,7 @@ head(mpg)
 Exercise 1: We are interested in highway miles per gallon, or the hwy variable. Create a histogram of this variable. Describe what you see/learn.
 -
 ```{r}
+library(ggplot2)
 ggplot(mpg,aes(hwy,)) + geom_bar() + xlab("MPG on highway")
 ```
 Based on my histogram, most of the cars in this dataset get 26 mpg on the highway.
@@ -79,6 +78,7 @@ Exercise 3: Make a bar plot of manufacturer. Flip it so that the manufacturers a
 -
 ```{r}
 ggplot(mpg,aes(x=reorder(manufacturer,manufacturer,function(x)-length(x)),), horizontal = TRUE,) + geom_bar() + coord_flip() + xlab("Vehicles made")
+# source for how to reorder- (https://www.geeksforgeeks.org/how-to-reorder-boxplots-in-r-with-ggplot2/#:~:text=To%20reorder%20the%20boxplot%20we%20will%20use%20reorder,to%20reorder%20them%20in%20increasing%20and%20decreasing%20order.)
 ```
 The manufacturer that produced the most vehicles was Dodge. The manufacturer that produces the least vehicles was Lincoln.
 
