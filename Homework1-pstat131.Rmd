@@ -94,9 +94,11 @@ Exercise 5: Use the corrplot package to make a lower triangle correlation matrix
 -
 ```{r}
 library(corrplot)
+library(dplyr)
 mpg_matrix <- mpg %>%
   select_if(is.numeric) %>%
   cor(.)
 mpg_matrix
 corrplot(mpg_matrix, method = 'number', col = colorRampPalette(c("red","blue","green"))(100), type = 'lower')
 ```
+City per gallon is positively correlated with highway mpg but is negatively correlated everywhere else. Highway mpg is negatively correlated with engine displacement and cylinders. Year has a positive correlation with engine displacement and cylinders. Engine displacement has a positive correlation with cylinders.
