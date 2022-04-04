@@ -101,4 +101,4 @@ mpg_matrix <- mpg %>%
 mpg_matrix
 corrplot(mpg_matrix, method = 'number', col = colorRampPalette(c("red","blue","green"))(100), type = 'lower')
 ```
-City per gallon is positively correlated with highway mpg but is negatively correlated everywhere else. Highway mpg is negatively correlated with engine displacement and cylinders. Year has a positive correlation with engine displacement and cylinders. Engine displacement has a positive correlation with cylinders.
+City per gallon is positively correlated with highway mpg but is negatively correlated everywhere else. Highway mpg is negatively correlated with engine displacement and cylinders. Year has a positive correlation with engine displacement and cylinders. Engine displacement has a positive correlation with cylinders. What surprised me was that year and city have a slight negative correlation.
